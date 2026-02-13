@@ -1,0 +1,128 @@
+
+
+.login,
+.signup {
+    position: fixed;
+    inset: 0;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 200;
+    transition: opacity 0.3s ease;
+}
+
+.login form,
+.signup form {
+    position: relative;
+    background-color: #fff; 
+    width: 400px;
+    max-width: 90%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 1;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.login form h1,
+.signup form h1 {
+    font-size: 36px;
+    color: #344E41;
+    margin-bottom: 20px;
+}
+
+.login form div,
+.signup form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.login form div label,
+.signup form div label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login form div input,
+.signup form div input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login form div input:focus,
+.signup form div input:focus {
+    border-color: #344E41;
+    box-shadow: 0 0 5px rgba(52, 78, 65, 0.5);
+}
+
+.login form input[type="submit"],
+.signup form input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #344E41;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.login form input[type="submit"]:hover,
+.signup form input[type="submit"]:hover {
+    background-color: #5b8871;    
+}
+
+.closeLogin,
+.closeSignup {
+    max-width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    background-color: #ff5d5d;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.closeLogin:hover,
+.closeSignup:hover {
+    background-color: #ff2d2d;
+}
+
+.signupBtn,
+.loginBtn {
+    margin-top: 10px;
+    color: #344E41;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.signupBtn:hover,
+.loginBtn:hover {
+    color: #5b8871;
+    text-decoration: underline;
+}
